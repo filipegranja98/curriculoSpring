@@ -17,7 +17,7 @@ public class Curriculo {
     private String nome;
 
     @Column(nullable = false)
-    private int idade;
+    private Integer idade;
 
     @Column(nullable = false)
     private String email;
