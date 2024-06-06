@@ -11,7 +11,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("formacoes")
+@RequestMapping("/formacoes")
 public class FormacaoController {
     private final FormacaoService formacaoService;
 
