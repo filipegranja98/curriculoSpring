@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("historicoprofissional")
+@RequestMapping("/historicoprofissional")
 public class HistoricoProfissionalController {
     private final HistoricoProfissionalService historicoProfissionalService;
 
