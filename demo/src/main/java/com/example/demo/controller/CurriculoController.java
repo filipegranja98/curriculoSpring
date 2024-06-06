@@ -10,7 +10,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 @RestController
-@RequestMapping("curriculos")
+@RequestMapping("/curriculos")
 public class CurriculoController {
     private CurriculoService curriculoService;
 
