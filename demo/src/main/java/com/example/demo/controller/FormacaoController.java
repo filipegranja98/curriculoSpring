@@ -38,7 +38,10 @@ public class FormacaoController {
     public Optional<Formacao> atualizarFormacao(@PathVariable UUID id,@RequestBody Formacao formacao){
         return formacaoService.atualizarFormacao(id,formacao);
     }
-
+    @DeleteMapping("/{id}")
+    public boolean deletaFormacao(@PathVariable UUID id){
+        return formacaoService.deletarFormacao(id);
+    }
 
 
 }

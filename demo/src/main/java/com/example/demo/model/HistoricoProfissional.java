@@ -1,5 +1,6 @@
 package com.example.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -23,5 +24,6 @@ public class HistoricoProfissional {
 
     @ManyToOne
     @JoinColumn(name="id_curriculo",referencedColumnName = "id")
+    @JsonBackReference
     private Curriculo curriculo;
 }

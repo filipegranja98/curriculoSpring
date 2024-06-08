@@ -2,6 +2,8 @@ package com.example.demo.controller;
 
 import com.example.demo.Service.CurriculoService;
 import com.example.demo.model.Curriculo;
+import com.example.demo.model.Formacao;
+import com.example.demo.model.HistoricoProfissional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -22,6 +24,12 @@ public class CurriculoController {
 
     @PostMapping
     public Curriculo criarCurriculo(@RequestBody  Curriculo curriculo){
+        for (Formacao formacao:curriculo.getFormacoes()){
+            formacao.setCurriculo(curriculo);
+        }
+        for(HistoricoProfissional historicoProfissional: curriculo.getHistoricoProfissionals()){
+            historicoProfissional.setCurriculo(curriculo);
+        }
         return curriculoService.createCurriculo(curriculo);
     }
     @GetMapping
